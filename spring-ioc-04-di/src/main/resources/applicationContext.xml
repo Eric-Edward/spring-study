@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="edu.eric.pojo.Address">
+        <property name="address" value="山东德州！"/>
+    </bean>
+
+    <bean id="student" class="edu.eric.pojo.Student">
+        <property name="name" value="Eric"/>
+        <property name="address" ref="address"/>
+        <property name="girlFriendsName">
+            <array>
+                <value>赵丽颖</value>
+                <value>迪丽热巴</value>
+                <value>杨幂</value>
+                <value>白鹿</value>
+            </array>
+        </property>
+        <property name="teacher">
+            <map>
+                <entry key="Math" value="梅宏"/>
+                <entry key="English" value="文冬安"/>
+                <entry key="Chinese" value="fengweilong"/>
+            </map>
+        </property>
+        <property name="hobby">
+            <set>
+                <value>pingpang</value>
+                <value>basketball</value>
+                <value>football</value>
+                <value>baseball</value>
+            </set>
+        </property>
+        <property name="major">
+            <list>
+                <value>Computer Network</value>
+                <value>Computer Compose</value>
+            </list>
+        </property>
+        <property name="haveChild">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="name">Eric</prop>
+                <prop key="passwd">Tsinghua</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
