@@ -3,6 +3,7 @@ package edu.eric.pojo;
 public class Hello {
     private String name;
 
+
     public String getName() {
         return name;
     }
